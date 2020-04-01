@@ -8,6 +8,7 @@
 	    public SpaceInvaders(int longueur, int hauteur) {
 		   this.longueur = longueur;
 		   this.hauteur = hauteur;
+		   System.out.println("test");
 	   }
 	    
 		@Override
