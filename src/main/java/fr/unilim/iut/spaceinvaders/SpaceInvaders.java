@@ -69,4 +69,8 @@
 			return vaisseau!=null;
 		}
 
+		public void deplacerVaisseauVersLaDroite() {
+	        if (vaisseau.abscisse()< (longueur-1)) vaisseau.seDeplacerVersLaDroite();
+		}
+
    }
