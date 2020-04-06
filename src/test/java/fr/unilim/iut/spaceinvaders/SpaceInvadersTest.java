@@ -55,7 +55,7 @@ import fr.unilim.iut.spaceinvaders.SpaceInvaders.HorsEspaceJeuException;
     		SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
     		spaceinvaders.positionnerUnNouveauVaisseau(14,10);
     	}
-        /*
+        
         @Test
     	public void test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException() {
     		SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
@@ -87,6 +87,6 @@ import fr.unilim.iut.spaceinvaders.SpaceInvaders.HorsEspaceJeuException;
     		} catch (final HorsEspaceJeuException e) {
     		}
     			
-    	}*/
+    	}
         
     }
