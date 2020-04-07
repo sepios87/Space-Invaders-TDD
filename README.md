@@ -4,7 +4,7 @@
 - Création du projet maven
 - Création des premiers tests
 
-*Quelsques difficultés pour synchroniser mon projet maven a gitHub en passant seulement par Eclipse *
+*Quelsques difficultés pour synchroniser mon projet maven a gitHub en passant seulement par Eclipse*
 
 ------------
 
