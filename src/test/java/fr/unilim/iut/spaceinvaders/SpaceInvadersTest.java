@@ -153,7 +153,7 @@ import fr.unilim.iut.spaceinvaders.SpaceInvaders.HorsEspaceJeuException;
     	public void test_VaisseauImmobile_DeplacerVaisseauVersLaGauche() {
     		
     		spaceinvaders.positionnerUnNouveauVaisseau(0,9);
-
+    		
     		spaceinvaders.deplacerVaisseauVersLaGauche();
     		
     		assertEquals("" + 
