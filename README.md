@@ -8,19 +8,19 @@
 
 ------------
 
-##Story 2 :
+## Story 2 :
 - Découverte du refactoring
 - On continue les tests
 - Premiers diagrammes de classe
 
 ------------
 
-##Story 3 :
+## Story 3 :
 Bien passé
 
 ------------
 
-##Story 4 :
+## Story 4 :
 Génération d'un nuage de mots clés
 > Voire dans le dossier *images*
 
