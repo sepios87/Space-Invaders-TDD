@@ -29,7 +29,7 @@ Si le vaisseau se trouve sur la bordure gauche de l'espace de jeu, le vaisseau d
 ### Diagramme de classe : 
 ![Diagrammes de classes semaine 1](images/diagramme_de_classes.png)
 
-###Nuage de mots :
+### Nuage de mots :
 ![Nuage de mots](images/nuage_de_mots.png)
 ------------- 
 
