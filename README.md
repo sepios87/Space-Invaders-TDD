@@ -1,6 +1,10 @@
 # Space invaders
-## Story 1 : 
-### Mise en place du projet
+- [Semaine 1 : 30/03/2020 - 05/04/2020](#semaine1) 
+
+## Semaine 1 <a id="semaine 1"></a>
+###Fonctinnalité 1 
+#### Story 1 : 
+##### Mise en place du projet
 - Création du projet maven
 - Création des premiers tests
 
@@ -8,19 +12,19 @@
 
 ------------
 
-## Story 2 :
+#### Story 2 :
 - Découverte du refactoring
 - On continue les tests
 - Premiers diagrammes de classe
 
 ------------
 
-## Story 3 :
+#### Story 3 :
 Bien passé
 
 ------------
 
-## Story 4 :
+#### Story 4 :
 Génération d'un nuage de mots clés
 > Voire dans le dossier *images*
 
