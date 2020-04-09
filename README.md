@@ -1,5 +1,6 @@
 # Space invaders
 - [Semaine 1 : 30/03/2020 - 05/04/2020](#semaine1) 
+- [Glossaire](#glossaire)
 
 ## Semaine 1 <a id="semaine 1"></a>
 ### Fonctinnalité 1 : Déplacer vaisseau dans espace de jeu
@@ -42,8 +43,5 @@ Bien passé
 
 
 * **Missile** :  projectile envoyé à la verticale par le vaisseau vers l'envahisseur dans le but de le détruire.
-
-La définition des termes métiers relatifs au projet doit se trouver dans le glossaire 
-Ce glossaire doit être compléter au fil des séances...
 
 ------------- 
