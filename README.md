@@ -2,7 +2,7 @@
 - [Semaine 1 : 30/03/2020 - 05/04/2020](#semaine1) 
 
 ## Semaine 1 <a id="semaine 1"></a>
-### Fonctinnalité 1 
+### Fonctinnalité 1 : Déplacer vaisseau dans espace de jeu
 #### Story 1 : 
 ##### Mise en place du projet
 - Création du projet maven
@@ -25,6 +25,8 @@ Bien passé
 ------------
 
 #### Story 4 :
-Génération d'un nuage de mots clés
-> Voire dans le dossier *images*
+- Génération d'un nuage de mots clés
 
+------------
+
+### Diagramme de classe : 
