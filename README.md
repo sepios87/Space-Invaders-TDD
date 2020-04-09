@@ -30,4 +30,4 @@ Bien passé
 ------------
 
 ### Diagramme de classe : 
-![Diagrammes de classes de la semaine 1](images/diagramme_classes.PNG)
+![Diagrammes de classes de la semaine 1](images/diagramme_classes.png)
