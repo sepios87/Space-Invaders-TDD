@@ -31,4 +31,3 @@ Bien passé
 
 ### Diagramme de classe : 
 ![Diagrammes de classes semaine 1](images/diagramme_de_classes.png)
-![Nuage de mots clés](images/diagramme_de_classes.png)
