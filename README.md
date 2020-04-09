@@ -26,8 +26,8 @@ Bien passé
 
 #### Story 4 :
 - Génération d'un nuage de mots clés
-
+![Nuage de mots clés](images/nuage_de_mots.png)
 ------------
 
 ### Diagramme de classe : 
-![Diagrammes de classes de la semaine 1](images/diagramme classes.png)
+![Diagrammes de classes de la semaine 1](images/diagramme_classes.png)
