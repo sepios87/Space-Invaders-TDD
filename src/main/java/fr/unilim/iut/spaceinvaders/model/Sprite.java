@@ -1,11 +1,10 @@
-package fr.unilim.iut.spaceinvaders;
+package fr.unilim.iut.spaceinvaders.model;
 
 public abstract class Sprite {
 
 	protected Position origine;
 	protected Dimension dimension;
 	protected int vitesse;
-
 	
 	
 	public Sprite(Dimension dimension, Position origine, int vitesse) {
