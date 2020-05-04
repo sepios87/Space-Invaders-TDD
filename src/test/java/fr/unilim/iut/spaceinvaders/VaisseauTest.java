@@ -2,6 +2,8 @@ package fr.unilim.iut.spaceinvaders;
 
 import org.junit.Test;
 
+import spaceinvaders.utils.MissileException;
+
 public class VaisseauTest {
 	
     @Test(expected = MissileException.class)

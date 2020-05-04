@@ -2,6 +2,9 @@ package fr.unilim.iut.spaceinvaders;
 
 import fr.unilim.iut.spaceinvaders.moteurjeu.Commande;
 import fr.unilim.iut.spaceinvaders.moteurjeu.Jeu;
+import spaceinvaders.utils.DebordementEspaceJeuException;
+import spaceinvaders.utils.HorsEspaceJeuException;
+import spaceinvaders.utils.MissileException;
 
 public class SpaceInvaders implements Jeu{
 
@@ -39,25 +42,9 @@ public void positionnerUnNouveauVaisseau(Dimension dimension, Position position,
 
 		vaisseau = new Vaisseau(dimension,position,vitesse);
 	}
-	
-    @SuppressWarnings("serial")
-    public class DebordementEspaceJeuException extends RuntimeException {
-
-	    public DebordementEspaceJeuException(String message) {
-		    super(message);
-	    }
-    }
 
 	private boolean estDansEspaceJeu(int x, int y) {
 		return (((x >= 0) && (x < longueur)) && ((y >= 0) && (y < hauteur)));
-	}
-
-	@SuppressWarnings("serial")
-	class HorsEspaceJeuException extends RuntimeException {
-		public HorsEspaceJeuException(String message) {
-			super(message);
-		}
-
 	}
 
 	public String recupererEspaceJeuDansChaineASCII() {
@@ -99,7 +86,7 @@ public void positionnerUnNouveauVaisseau(Dimension dimension, Position position,
 
 	public void deplacerVaisseauVersLaDroite() {
 		if (vaisseau.abscisseLaPlusADroite() < (longueur - 1)) {
-			vaisseau.seDeplacerVersLaDroite();
+			vaisseau.deplacerHorizontalementVers(Direction.DROITE);
 			if (!estDansEspaceJeu(vaisseau.abscisseLaPlusADroite(), vaisseau.ordonneeLaPlusHaute())) {
 				vaisseau.positionner(longueur - vaisseau.getDimension().longueur(), vaisseau.ordonneeLaPlusHaute());
 			}
@@ -108,13 +95,13 @@ public void positionnerUnNouveauVaisseau(Dimension dimension, Position position,
 
 	public void deplacerVaisseauVersLaGauche() {
 		if (0 < vaisseau.abscisseLaPlusAGauche())
-			vaisseau.seDeplacerVersLaGauche();
+			vaisseau.deplacerHorizontalementVers(Direction.GAUCHE);
 		if (!estDansEspaceJeu(vaisseau.abscisseLaPlusAGauche(), vaisseau.ordonneeLaPlusHaute())) {
 			vaisseau.positionner(0, vaisseau.ordonneeLaPlusHaute());
 		}
 	}
 	
-	public void tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) throws MissileException {
+	public void tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) {
 		
 		   if ((vaisseau.dimension.hauteur()+ dimensionMissile.hauteur()) > this.hauteur )
 			   throw new MissileException("Pas assez de hauteur libre entre le vaisseau et le haut de l'espace jeu pour tirer le missile");
@@ -143,20 +130,26 @@ public void positionnerUnNouveauVaisseau(Dimension dimension, Position position,
 		}
 		
 		 if (commandeUser.tir && !this.aUnMissile()) {
-			try {
 				this.tirerUnMissile(new Dimension(Constante.MISSILE_LONGUEUR, Constante.MISSILE_HAUTEUR), Constante.MISSILE_VITESSE);
-			} catch (MissileException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
+		 
+		 if (this.aUnMissile() && commandeUser != null) {
+			 this.deplacerMissile();
+			 if(this.missile.origine.ordonnee() + this.missile.dimension.hauteur() < 0) {
+				 this.missile = null;
+			 }
+		 }
 
 	}
 
 	@Override
 	public boolean etreFini() {
 		return false;
+	}
 
+	public void deplacerMissile() {
+		// TODO Auto-generated method stub
+		this.missile.deplacerVerticalementVers(Direction.HAUT_ECRAN);
 	}
 
 }
