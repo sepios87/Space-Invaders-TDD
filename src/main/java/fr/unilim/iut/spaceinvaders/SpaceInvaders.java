@@ -89,11 +89,11 @@ public void positionnerUnNouveauVaisseau(Dimension dimension, Position position,
 		return this.aUnMissile() && missile.occupeLaPosition(x, y);
 	}
 
-	boolean aUnVaisseau() {
+	public boolean aUnVaisseau() {
 		return vaisseau != null;
 	}
 	
-	private boolean aUnMissile() {
+	public boolean aUnMissile() {
 		return missile != null;
 	}
 
@@ -120,10 +120,15 @@ public void positionnerUnNouveauVaisseau(Dimension dimension, Position position,
 			   throw new MissileException("Pas assez de hauteur libre entre le vaisseau et le haut de l'espace jeu pour tirer le missile");
 							
 		   this.missile = this.vaisseau.tirerUnMissile(dimensionMissile,vitesseMissile);
+		   System.out.println("coucou");
     }
 
 	public Vaisseau recupererVaisseau() {
 		return this.vaisseau;
+	}
+	
+	public Missile recupererMissile() {
+		return this.missile;
 	}
 
 	@Override
@@ -135,6 +140,15 @@ public void positionnerUnNouveauVaisseau(Dimension dimension, Position position,
 
 		if (commandeUser.droite) {
 			deplacerVaisseauVersLaDroite();
+		}
+		
+		 if (commandeUser.tir && !this.aUnMissile()) {
+			try {
+				this.tirerUnMissile(new Dimension(Constante.MISSILE_LONGUEUR, Constante.MISSILE_HAUTEUR), Constante.MISSILE_VITESSE);
+			} catch (MissileException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 	}
