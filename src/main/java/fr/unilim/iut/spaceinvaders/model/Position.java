@@ -9,10 +9,12 @@ public class Position {
 	   this.y = y;
    }
 
+   /**absicisse = x*/
    public int abscisse() {
 	   return this.x;
    }
 
+   /**ordonnee = y*/
   public int ordonnee() {
 	  return this.y;
   }

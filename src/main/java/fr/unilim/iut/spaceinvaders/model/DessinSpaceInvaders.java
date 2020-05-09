@@ -3,6 +3,7 @@ package fr.unilim.iut.spaceinvaders.model;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.util.List;
 
 import fr.unilim.iut.spaceinvaders.moteurjeu.DessinJeu;
 
@@ -21,17 +22,17 @@ public class DessinSpaceInvaders implements DessinJeu {
 
 	   @Override
 	   public void dessiner(BufferedImage im) {
-		   if (this.jeu.aUnVaisseau()) {
+		   if (this.jeu.aUnSprite(this.jeu.recupererVaisseau())) {
 			   Vaisseau vaisseau = this.jeu.recupererVaisseau();
 			   this.dessinerUnSprite(vaisseau, im, Color.gray);
 		   }
-		   if (this.jeu.aUnMissile()) {
-			   Missile missile = this.jeu.recupererMissile();
-			   this.dessinerUnSprite(missile, im, Color.blue);
+		   if (!this.jeu.recupererMissiles().isEmpty()) {
+			   List <Missile> missiles = this.jeu.recupererMissiles();
+			   for (Missile missile : missiles) this.dessinerUnSprite(missile, im, Color.blue);
 		   }
-		   if (this.jeu.aUnEnvahisseur()) {
-			   Envahisseur envahisseur = this.jeu.recupererEnvahisseur();
-			   this.dessinerUnSprite(envahisseur, im, Color.red);
+		   if (!this.jeu.recupererEnvahisseurs().isEmpty()) {
+			   List <Envahisseur> envahisseurs = this.jeu.recupererEnvahisseurs();
+			   for (Envahisseur envahisseur : envahisseurs) this.dessinerUnSprite(envahisseur, im, Color.red);
 		   }
 	   }
 	   
