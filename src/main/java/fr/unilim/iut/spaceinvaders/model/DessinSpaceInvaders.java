@@ -36,6 +36,11 @@ public class DessinSpaceInvaders implements DessinJeu {
 		   }
 	   }
 	   
+	   @Override
+	   public int getScore() {
+		   return this.jeu.getScore();
+	   }
+	   
 	   private void dessinerUnSprite(Sprite sprite, BufferedImage im, Color couleur) {
 		   Graphics2D crayon = (Graphics2D) im.getGraphics();
 		   crayon.setColor(couleur);

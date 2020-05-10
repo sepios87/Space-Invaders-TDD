@@ -82,6 +82,7 @@ public class PanelDessin extends JPanel {
 		super.paint(g);
 		g.drawImage(this.imageEnCours, 0, 0, getWidth(), getHeight(), 0, 0,
 				getWidth(), getHeight(), null);
+		g.drawString(String.valueOf(this.dessin.getScore()), 10, 15);
 	}
 
 }

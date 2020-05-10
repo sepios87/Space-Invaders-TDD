@@ -45,6 +45,7 @@ public class InterfaceGraphique  {
 		
 		//recuperation du focus
 		f.pack();
+		f.setResizable(false);
 		f.setVisible(true);
 		f.getContentPane().setFocusable(true);
 		f.getContentPane().requestFocus();

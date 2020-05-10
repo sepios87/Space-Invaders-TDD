@@ -94,7 +94,7 @@
   <class id="10" language="java" name="fr.unilim.iut.spaceinvaders.model.Collision" project="spaceinvaders" 
     file="/spaceinvaders/src/main/java/fr/unilim/iut/spaceinvaders/model/Collision.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="886" y="815"/>    
+    <position height="-1" width="-1" x="886" y="838"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      

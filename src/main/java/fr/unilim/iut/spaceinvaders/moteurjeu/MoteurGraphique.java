@@ -57,6 +57,7 @@ public class MoteurGraphique {
 			// met en attente
 			Thread.sleep(10);
 		}
+		System.out.println("Partie finie");
 	}
 
 }

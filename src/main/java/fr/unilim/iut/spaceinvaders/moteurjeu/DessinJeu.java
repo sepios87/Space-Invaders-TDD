@@ -16,6 +16,8 @@ public interface DessinJeu {
 	 * @param image
 	 *            image sur laquelle dessiner
 	 */
-	public abstract void dessiner(BufferedImage image);
+	public abstract void dessiner(BufferedImage imageSuivante);
+	
+	public abstract int getScore();
 
 }
