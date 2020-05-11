@@ -10,14 +10,14 @@ public abstract class SpriteTireur extends Sprite {
 		super(dimension, positionOrigine, vitesse, couleur);
 	}
 
-	public Missile tirerUnMissile(Dimension dimensionMissile, int vitesseMissile, final char typeMissile, int ordonne, Color couleur) throws MissileException {
+	public Missile tirerUnMissile(Dimension dimensionMissile, int vitesseMissile, int ordonne, Color couleur) throws MissileException {
 
 		if (dimensionMissile.longueur() > this.dimension.longueur())
 			throw new MissileException("probleme missile");
 
 		Position positionOrigineMissile = calculerLaPositionDeTirDuMissile(dimensionMissile, ordonne);
 
-		return new Missile(dimensionMissile, positionOrigineMissile, vitesseMissile, typeMissile, couleur);
+		return new Missile(dimensionMissile, positionOrigineMissile, vitesseMissile, couleur);
 	}
 
 	private Position calculerLaPositionDeTirDuMissile(Dimension dimensionMissile, int ordonnee) {

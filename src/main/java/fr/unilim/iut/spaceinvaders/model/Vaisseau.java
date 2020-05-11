@@ -16,6 +16,6 @@ public class Vaisseau extends SpriteTireur {
 	}
 
 	 public Missile tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) throws MissileException {
-		return this.tirerUnMissile(dimensionMissile, vitesseMissile, Constante.TYPE_MISSILE_VAISSEAU, this.ordonneeLaPlusBasse()-1, Color.blue);
+		return this.tirerUnMissile(dimensionMissile, vitesseMissile, this.ordonneeLaPlusBasse()-1, Color.blue);
 	 }
 }

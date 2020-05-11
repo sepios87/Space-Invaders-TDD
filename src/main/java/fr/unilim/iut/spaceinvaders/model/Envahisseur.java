@@ -6,10 +6,13 @@ import spaceinvaders.utils.MissileException;
 
 public class Envahisseur extends SpriteTireur{
 	
-	boolean retour = true;
+	private boolean retour = true;
+	private int positionXBase;
+	
 	
 	 public Envahisseur(Dimension dimensionEnvahisseur, Position positionOrigineEnvahisseur, int vitesseEnvahisseur, Color couleur) {
 		 super(dimensionEnvahisseur, positionOrigineEnvahisseur, vitesseEnvahisseur, couleur);
+		 this.positionXBase = positionOrigineEnvahisseur.abscisse();
 	 }
 	 
 	 public Envahisseur(Dimension dimensionEnvahisseur, Position positionOrigineEnvahisseur, int vitesseEnvahisseur) {
@@ -24,8 +27,12 @@ public class Envahisseur extends SpriteTireur{
 		 return retour;
 	 }
 	 
+	 public boolean restePermimetreCourse() {
+		 return !(positionXBase < this.getPosition().abscisse()-Constante.DISTANCE_ENVAHISSEUR_PARCOURS || positionXBase >= this.getPosition().abscisse() + Constante.DISTANCE_ENVAHISSEUR_PARCOURS);
+	 }
+	 
 	 public Missile tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) throws MissileException {
-		return this.tirerUnMissile(dimensionMissile, -vitesseMissile, Constante.TYPE_MISSILE_ENVAHISSEUR, this.ordonneeLaPlusHaute() + 1, Color.pink);
+		return this.tirerUnMissile(dimensionMissile, vitesseMissile, this.ordonneeLaPlusHaute() + 1, Color.pink);
 	 }
 
 }
