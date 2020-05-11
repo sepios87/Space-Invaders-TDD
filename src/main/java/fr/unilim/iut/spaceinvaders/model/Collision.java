@@ -6,13 +6,11 @@ public class Collision {
 
 	}
 
-	public boolean detecterCollision(Missile missile, Envahisseur envahisseur) {
-		return missile.getPosition().ordonnee() >= envahisseur.getPosition().ordonnee()
-				&& missile.getPosition().ordonnee() - missile.getDimension().hauteur() <= envahisseur.getPosition()
-						.ordonnee()
-				&& missile.getPosition().abscisse() >= envahisseur.getPosition().abscisse() - envahisseur.getDimension().longueur()
-				&& missile.getPosition().abscisse() - missile.getDimension().longueur() <= envahisseur.getPosition()
-						.abscisse() ;
+	public boolean detecterCollision(Sprite spriteLance, Sprite spriteTouche) {
+		return spriteLance.ordonneeLaPlusHaute() >= spriteTouche.ordonneeLaPlusBasse()
+				&& spriteLance.ordonneeLaPlusHaute() <= spriteTouche.ordonneeLaPlusHaute()
+				&& spriteLance.abscisseLaPlusADroite() >= spriteTouche.abscisseLaPlusAGauche()
+				&& spriteLance.abscisseLaPlusADroite() <= spriteTouche.abscisseLaPlusADroite();
 	}
 
 }

@@ -24,15 +24,15 @@ public class DessinSpaceInvaders implements DessinJeu {
 	   public void dessiner(BufferedImage im) {
 		   if (this.jeu.aUnSprite(this.jeu.recupererVaisseau())) {
 			   Vaisseau vaisseau = this.jeu.recupererVaisseau();
-			   this.dessinerUnSprite(vaisseau, im, Color.gray);
+			   this.dessinerUnSprite(vaisseau, im, vaisseau.getColor());
 		   }
 		   if (!this.jeu.recupererMissiles().isEmpty()) {
 			   List <Missile> missiles = this.jeu.recupererMissiles();
-			   for (Missile missile : missiles) this.dessinerUnSprite(missile, im, Color.blue);
+			   for (Missile missile : missiles) this.dessinerUnSprite(missile, im, missile.getColor());
 		   }
 		   if (!this.jeu.recupererEnvahisseurs().isEmpty()) {
 			   List <Envahisseur> envahisseurs = this.jeu.recupererEnvahisseurs();
-			   for (Envahisseur envahisseur : envahisseurs) this.dessinerUnSprite(envahisseur, im, Color.red);
+			   for (Envahisseur envahisseur : envahisseurs) this.dessinerUnSprite(envahisseur, im, envahisseur.getColor());
 		   }
 	   }
 	   

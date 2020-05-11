@@ -2,6 +2,7 @@ package fr.unilim.iut.spaceinvaders.model;
 
 public enum Direction {
 	
+	SELON_VITESSE (-1),
 	HAUT (1),
     BAS (-1),
     GAUCHE (-1),

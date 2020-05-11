@@ -1,13 +1,19 @@
 package fr.unilim.iut.spaceinvaders.model;
 
+import java.awt.Color;
+
 import spaceinvaders.utils.MissileException;
 
-public class Envahisseur extends Sprite{
+public class Envahisseur extends SpriteTireur{
 	
 	boolean retour = true;
 	
+	 public Envahisseur(Dimension dimensionEnvahisseur, Position positionOrigineEnvahisseur, int vitesseEnvahisseur, Color couleur) {
+		 super(dimensionEnvahisseur, positionOrigineEnvahisseur, vitesseEnvahisseur, couleur);
+	 }
+	 
 	 public Envahisseur(Dimension dimensionEnvahisseur, Position positionOrigineEnvahisseur, int vitesseEnvahisseur) {
-		 super(dimensionEnvahisseur, positionOrigineEnvahisseur, vitesseEnvahisseur);
+		 this(dimensionEnvahisseur, positionOrigineEnvahisseur, vitesseEnvahisseur, Color.red);
 	 }
 	 
 	 public void changerRetour() {
@@ -19,22 +25,7 @@ public class Envahisseur extends Sprite{
 	 }
 	 
 	 public Missile tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) throws MissileException {
-		 
-		 if (dimensionMissile.longueur() > this.dimension.longueur())
-			 throw new MissileException ("probleme missile");
-			 
-			Position positionOrigineMissile = calculerLaPositionDeTirDuMissile(dimensionMissile);
-
-			return new Missile(dimensionMissile, positionOrigineMissile, vitesseMissile);
-		}
-
-	private Position calculerLaPositionDeTirDuMissile(Dimension dimensionMissile) {
-		int abscisseMilieuEnvahisseur = this.abscisseLaPlusAGauche() + (this.dimension.longueur() / 2);
-		int abscisseOrigineMissile = abscisseMilieuEnvahisseur - (dimensionMissile.longueur() / 2);
-
-		int ordonneeeOrigineMissile = this.ordonneeLaPlusBasse() - 1;
-		Position positionOrigineMissile = new Position(abscisseOrigineMissile, ordonneeeOrigineMissile);
-		return positionOrigineMissile;
-	}
+		return this.tirerUnMissile(dimensionMissile, -vitesseMissile, Constante.TYPE_MISSILE_ENVAHISSEUR, this.ordonneeLaPlusHaute() + 1, Color.pink);
+	 }
 
 }

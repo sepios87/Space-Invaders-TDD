@@ -1,31 +1,21 @@
 package fr.unilim.iut.spaceinvaders.model;
 
+import java.awt.Color;
+
 import spaceinvaders.utils.MissileException;
 
-public class Vaisseau extends Sprite {
+public class Vaisseau extends SpriteTireur {
 
 	
-	public Vaisseau(Dimension dimension, Position positionOrigine, int vitesse) {
-		super(dimension, positionOrigine, vitesse);
+	public Vaisseau(Dimension dimension, Position positionOrigine, int vitesse, Color couleur) {
+		super(dimension, positionOrigine, vitesse, couleur);
+	}
+	
+	public Vaisseau(Dimension dimension, Position positionOrigine, int vitesse) { 
+		this(dimension, positionOrigine, vitesse, Color.gray);
 	}
 
 	 public Missile tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) throws MissileException {
-		 
-		 if (dimensionMissile.longueur() > this.dimension.longueur())
-			 throw new MissileException ("probleme missile");
-			 
-			Position positionOrigineMissile = calculerLaPositionDeTirDuMissile(dimensionMissile);
-
-			return new Missile(dimensionMissile, positionOrigineMissile, vitesseMissile);
-		}
-
-	private Position calculerLaPositionDeTirDuMissile(Dimension dimensionMissile) {
-		int abscisseMilieuVaisseau = this.abscisseLaPlusAGauche() + (this.dimension.longueur() / 2);
-		int abscisseOrigineMissile = abscisseMilieuVaisseau - (dimensionMissile.longueur() / 2);
-
-		int ordonneeeOrigineMissile = this.ordonneeLaPlusBasse() - 1;
-		Position positionOrigineMissile = new Position(abscisseOrigineMissile, ordonneeeOrigineMissile);
-		return positionOrigineMissile;
-	}
-
+		return this.tirerUnMissile(dimensionMissile, vitesseMissile, Constante.TYPE_MISSILE_VAISSEAU, this.ordonneeLaPlusBasse()-1, Color.blue);
+	 }
 }

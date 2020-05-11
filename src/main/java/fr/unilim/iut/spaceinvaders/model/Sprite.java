@@ -1,31 +1,39 @@
 package fr.unilim.iut.spaceinvaders.model;
 
+import java.awt.Color;
+
 public abstract class Sprite {
 
 	protected Position origine;
 	protected Dimension dimension;
+	protected Color couleur;
 	protected int vitesse;
 	
 	
-	public Sprite(Dimension dimension, Position origine, int vitesse) {
+	public Sprite(Dimension dimension, Position origine, int vitesse, Color couleur) {
 		this.origine = origine;
 		this.dimension = dimension;
 		this.vitesse = vitesse;
+		this.couleur = couleur;
 	}
 
 	public Sprite() {
 		super();
+	}
+	
+	public Color getColor() {
+		return this.couleur;
 	}
 
 	public boolean occupeLaPosition(int x, int y) {
 	    return estAbscisseCouverte(x) && estOrdonneeCouverte(y);
 	}
 
-	private boolean estOrdonneeCouverte(int y) {
+	public boolean estOrdonneeCouverte(int y) {
 	   return (ordonneeLaPlusBasse() <= y) && (y <= ordonneeLaPlusHaute());
 	}
 
-	private boolean estAbscisseCouverte(int x) {
+	public boolean estAbscisseCouverte(int x) {
 	   return (abscisseLaPlusAGauche() <= x) && (x <= abscisseLaPlusADroite());
 	}
 
