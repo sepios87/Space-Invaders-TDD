@@ -55,11 +55,11 @@ public abstract class Sprite {
 	   }
 
 	public Dimension getDimension() {
-		return dimension;
+		return this.dimension;
 	}
 	
 	public Position getPosition() {
-		return origine;
+		return this.origine;
 	}
 	
 	public void deplacerVerticalementVers(Direction direction) {

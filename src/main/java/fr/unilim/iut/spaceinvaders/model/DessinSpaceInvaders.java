@@ -26,7 +26,7 @@ public class DessinSpaceInvaders implements DessinJeu {
 
 	   @Override
 	   public void dessiner(BufferedImage im) {
-		   if (this.jeu.aUnSprite(this.jeu.recupererVaisseau())) {
+		   if (this.jeu.recupererVaisseau() != null) {
 			   Vaisseau vaisseau = this.jeu.recupererVaisseau();
 			   this.dessinerUnSprite(vaisseau, im, vaisseau.getLocImage());
 		   }
