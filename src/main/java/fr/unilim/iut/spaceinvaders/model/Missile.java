@@ -4,11 +4,14 @@ import java.awt.Color;
 
 public class Missile extends Sprite{
 	
-	 public Missile(Dimension dimensionMissile, Position positionOrigineMissile, int vitesseMissile, Color couleur) {
-		 super(dimensionMissile, positionOrigineMissile, vitesseMissile, couleur);
+	Color couleurMissile;
+	
+	 public Missile(Dimension dimensionMissile, Position positionOrigineMissile, int vitesseMissile, Color couleurMissile) {
+		 super(dimensionMissile, positionOrigineMissile, vitesseMissile);
+		 this.couleurMissile = couleurMissile;
 	 }
 	 
-	 public Missile(Dimension dimensionMissile, Position positionOrigineMissile, int vitesseMissile) {
-		 this (dimensionMissile, positionOrigineMissile, vitesseMissile, Color.blue);
+	 public Color getColor() {
+		 return this.couleurMissile;
 	 }
 }

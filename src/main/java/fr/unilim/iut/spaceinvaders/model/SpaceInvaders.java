@@ -12,13 +12,12 @@ import spaceinvaders.utils.MissileException;
 public class SpaceInvaders implements Jeu {
 
 	private int longueur, hauteur, score = 0, nbVague = 0;
+	private long tpsEntreDeuxMissilesVaisseau = 0, tpsEntreDeuxMissilesEnvahisseur = 0;
 	private Vaisseau vaisseau;
 	private List<Envahisseur> envahisseurs = new ArrayList<Envahisseur>();
 	private List<Missile> missilesVaisseau = new ArrayList<Missile>();
 	private List<Missile> missilesEnvahisseur = new ArrayList<Missile>();
 	private Collision collision = new Collision();
-	private long tpsEntreDeuxMissilesVaisseau = 0;
-	private long tpsEntreDeuxMissilesEnvahisseur = 0;
 
 	public SpaceInvaders(int longueur, int hauteur) {
 		this.longueur = longueur;

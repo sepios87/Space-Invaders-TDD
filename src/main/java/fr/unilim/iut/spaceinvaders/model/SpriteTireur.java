@@ -1,14 +1,17 @@
 package fr.unilim.iut.spaceinvaders.model;
 
 import java.awt.Color;
+import java.io.File;
 
 import spaceinvaders.utils.MissileException;
 
 public abstract class SpriteTireur extends Sprite {
 
-	public SpriteTireur(Dimension dimension, Position positionOrigine, int vitesse, Color couleur) {
-		super(dimension, positionOrigine, vitesse, couleur);
+	public SpriteTireur(Dimension dimension, Position positionOrigine, int vitesse) {
+		super(dimension, positionOrigine, vitesse);
 	}
+	
+	public abstract File getLocImage();
 
 	public Missile tirerUnMissile(Dimension dimensionMissile, int vitesseMissile, int ordonne, Color couleur) throws MissileException {
 
