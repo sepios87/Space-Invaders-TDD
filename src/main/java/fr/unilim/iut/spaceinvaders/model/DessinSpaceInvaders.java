@@ -3,8 +3,8 @@ package fr.unilim.iut.spaceinvaders.model;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 
 import javax.imageio.ImageIO;
@@ -57,7 +57,7 @@ public class DessinSpaceInvaders implements DessinJeu {
 		   crayon.fillRect(sprite.abscisseLaPlusAGauche(), sprite.ordonneeLaPlusBasse(), sprite.getDimension().longueur(), sprite.getDimension().hauteur());
 	   }
 	   
-	   private void dessinerUnSprite(Sprite sprite, BufferedImage im, File locImage) {
+	   private void dessinerUnSprite(Sprite sprite, BufferedImage im, URL locImage) {
 		   Graphics2D crayon = (Graphics2D) im.getGraphics();
 		try {
 			 crayon.drawImage(ImageIO.read(locImage), sprite.abscisseLaPlusAGauche(), sprite.ordonneeLaPlusBasse(), sprite.getDimension().longueur(), sprite.getDimension().hauteur(), null);

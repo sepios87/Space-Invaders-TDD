@@ -37,8 +37,10 @@ Fonctionalité 13 :x:
 
 ### :information_source: Diagramme de classe et nuage de mot:
 #### (Fonctionnalité 4)
-![Diagrammes de classes fonctionnalite 4](images/digramme_fc4.png)
 ![Nuage de mots fonctionnalite 1](images/nuageMot_fc4.png)
+
+#### (Fonctionnalité 5)
+![Diagrammes de classes fonctionnalite 5](images/diagramme_fc5.png)
 
 ------------- 
 
@@ -49,7 +51,7 @@ Fonctionalité 13 :x:
 ### :information_source: Diagramme de classe et nuage de mot:
 #### (Fonctionnalité 6)
 ![Diagrammes de classes fonctionnalite 6](images/diagramme_fc6.png)
-![Nuage de mots fonctionnalite 1](images/nuageMot_fc6.png)
+![Nuage de mots fonctionnalite 6](images/nuageMot_fc6.png)
 
 ------------- 
 
@@ -66,7 +68,7 @@ Fonctionalité 13 :x:
 
 #### (Fonctionnalité 12)
 ![Diagrammes de classes fonctionnalite 12](images/diagramme_fc12.png)
-![Nuage de mots fonctionnalite 1](images/nuageMot_fc12.png)
+![Nuage de mots fonctionnalite 12](images/nuageMot_fc12.png)
 
 ------------- 
 

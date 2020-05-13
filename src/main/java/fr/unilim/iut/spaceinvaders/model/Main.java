@@ -6,6 +6,8 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
 
+		System.setProperty("sun.java2d.opengl", "true");
+		
 		SpaceInvaders jeu = new SpaceInvaders();
 		jeu.initialiserJeu();
 		DessinSpaceInvaders afficheur = new DessinSpaceInvaders(jeu);

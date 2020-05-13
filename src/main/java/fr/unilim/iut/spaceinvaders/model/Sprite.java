@@ -63,6 +63,10 @@ public abstract class Sprite {
 	}
 	
 	public void deplacerVerticalementVers(Direction direction) {
+		this.deplacerVerticalementVers(direction, this.vitesse);
+	}
+	
+	public void deplacerVerticalementVers(Direction direction, int vitesse) {
 		this.origine.changerOrdonnee(this.origine.ordonnee() + direction.valeur()*vitesse);
 	}
 

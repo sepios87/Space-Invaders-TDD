@@ -1,7 +1,7 @@
 package fr.unilim.iut.spaceinvaders.model;
 
 import java.awt.Color;
-import java.io.File;
+import java.net.URL;
 
 import spaceinvaders.utils.MissileException;
 
@@ -9,8 +9,10 @@ public class Envahisseur extends SpriteTireur{
 	
 	private boolean retour = true;
 	private final int positionXBase;
-	private final File locImage1 = new File("./envahisseur.png");
-	private final File locImage2 = new File("./envahisseur2.png");
+	
+	private final URL locImage1 = Main.class.getResource("/imagesSprite/envahisseur.png");
+	private final URL locImage2 = Main.class.getResource("/imagesSprite/envahisseur2.png");
+
 	
 	 public Envahisseur(Dimension dimensionEnvahisseur, Position positionOrigineEnvahisseur, int vitesseEnvahisseur) {
 		 super(dimensionEnvahisseur, positionOrigineEnvahisseur, vitesseEnvahisseur);
@@ -34,7 +36,7 @@ public class Envahisseur extends SpriteTireur{
 	 }
 
 	@Override
-	public File getLocImage() {
+	public URL getLocImage() {
 		if (this.getPosition().abscisse()%(Constante.DISTANCE_ENVAHISSEUR_PARCOURS)>Constante.DISTANCE_ENVAHISSEUR_PARCOURS/2) return locImage1;
 		else return locImage2;
 	}

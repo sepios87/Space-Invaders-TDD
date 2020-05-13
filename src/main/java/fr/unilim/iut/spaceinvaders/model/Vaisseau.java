@@ -1,13 +1,13 @@
 package fr.unilim.iut.spaceinvaders.model;
 
 import java.awt.Color;
-import java.io.File;
+import java.net.URL;
 
 import spaceinvaders.utils.MissileException;
 
 public class Vaisseau extends SpriteTireur {
 
-	private final File locImage = new File("./vaisseau.png");
+	private final URL locImage = Main.class.getResource("/imagesSprite/vaisseau.png");
 	
 	public Vaisseau(Dimension dimension, Position positionOrigine, int vitesse) {
 		super(dimension, positionOrigine, vitesse);
@@ -18,7 +18,7 @@ public class Vaisseau extends SpriteTireur {
 	 }
 
 	@Override
-	public File getLocImage() {
+	public URL getLocImage() {
 		return locImage;
 	}
 }
