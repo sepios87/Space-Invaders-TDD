@@ -17,7 +17,5 @@ public interface DessinJeu {
 	 *            image sur laquelle dessiner
 	 */
 	public abstract void dessiner(BufferedImage imageSuivante);
-	
-	public abstract int getScore();
 
 }

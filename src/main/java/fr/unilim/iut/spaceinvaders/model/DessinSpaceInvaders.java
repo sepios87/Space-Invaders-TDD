@@ -44,11 +44,22 @@ public class DessinSpaceInvaders implements DessinJeu {
 				for (Missile missile : missilesEnvahisseur)
 					this.dessinerUnSprite(missile, im, missile.getColor());
 			}
+		this.dessinerScore(im);
+		
+		if (jeu.etreFini()) this.dessinerEcranFin(im);
+		
 	   }
 	   
-	   @Override
-	   public int getScore() {
-		   return this.jeu.getScore();
+	   private void dessinerEcranFin(BufferedImage im) {
+		   Graphics2D crayon = (Graphics2D) im.getGraphics();
+		   crayon.setColor(Color.black);
+		   crayon.drawString("GAME OVER", jeu.getLongueur()/2, jeu.getHauteur()/2);
+	   }
+	   
+	   private void dessinerScore(BufferedImage im) {
+		   Graphics2D crayon = (Graphics2D) im.getGraphics();
+		   crayon.setColor(Color.black);
+		   crayon.drawString(String.valueOf(this.jeu.getScore()), 10, 10);
 	   }
 	   
 	   private void dessinerUnSprite(Sprite sprite, BufferedImage im, Color couleur) {

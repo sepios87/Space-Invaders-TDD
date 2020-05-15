@@ -27,12 +27,12 @@ public class Envahisseur extends SpriteTireur{
 		 return retour;
 	 }
 	 
-	 public boolean restePermimetreCourse() {
-		 return !(positionXBase < this.getPosition().abscisse()-Constante.DISTANCE_ENVAHISSEUR_PARCOURS || positionXBase >= this.getPosition().abscisse() + Constante.DISTANCE_ENVAHISSEUR_PARCOURS);
+	 public boolean restePermimetreCourse(int distanceParcours) {
+		 return !(positionXBase < this.getPosition().abscisse()-distanceParcours || positionXBase >= this.getPosition().abscisse() + distanceParcours);
 	 }
 	 
 	 public Missile tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) throws MissileException {
-		return this.tirerUnMissile(dimensionMissile, vitesseMissile, this.ordonneeLaPlusHaute() + 1, Color.pink);
+		return this.tirerUnMissile(dimensionMissile, vitesseMissile, this.ordonneeLaPlusHaute()+dimensionMissile.hauteur(), Color.pink);
 	 }
 
 	@Override

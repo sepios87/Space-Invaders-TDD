@@ -27,7 +27,7 @@ public class Collision {
 				if (this.detecterCollision(jeu.recupererMissilesVaisseau().get(i),
 						jeu.recupererEnvahisseurs().get(j))) {
 					jeu.removeEnvahisseur(j);
-					jeu.augmenterScore();
+					jeu.augmenterScore(2);
 					removeMissile = true;
 				}
 			}
@@ -35,6 +35,7 @@ public class Collision {
 					if (this.detecterCollision(jeu.recupererMissilesEnvahisseur().get(j),
 							jeu.recupererMissilesVaisseau().get(i))) {
 						jeu.removeMissileEnvahisseur(j);
+						jeu.augmenterScore(1);
 						removeMissile = true;
 					}
 				}

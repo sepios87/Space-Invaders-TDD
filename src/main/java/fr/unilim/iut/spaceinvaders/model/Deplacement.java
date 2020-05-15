@@ -25,7 +25,7 @@ public class Deplacement {
 		}
 	}
 
-	public void deplacementEnvahisseur() {
+	public void deplacementEnvahisseur(int distanceParcours) {
 		for (int i = 0; i<this.jeu.recupererEnvahisseurs().size(); i++) {
 			if (this.jeu.recupererEnvahisseurs().get(i) != null) 
 				if (this.jeu.recupererEnvahisseurs().get(i).getRetour())
@@ -33,15 +33,24 @@ public class Deplacement {
 				else
 					this.deplacerSpriteVersLaGauche(this.jeu.recupererEnvahisseurs().get(i));
 
-				if (!this.jeu.recupererEnvahisseurs().get(i).restePermimetreCourse()) {
+				if (!this.jeu.recupererEnvahisseurs().get(i).restePermimetreCourse(distanceParcours)) {
 					this.jeu.recupererEnvahisseurs().get(i).changerRetour();
 					if (this.jeu.recupererEnvahisseurs().get(i).ordonneeLaPlusBasse() < this.jeu.getHauteur() - Constante.VAISSEAU_HAUTEUR*2) {
-						this.jeu.recupererEnvahisseurs().get(i).deplacerVerticalementVers(Direction.HAUT, 10);
+						this.jeu.recupererEnvahisseurs().get(i).deplacerVerticalementVers(Direction.HAUT, 5*Constante.ENVAHISSEUR_VITESSE_BAS);
 					}
-					else jeu.removeEnvahisseur(i);
+					else jeu.removeVaisseau();;
 				}
 			}
 		}
+	
+	public void deplacerMissile() {
+		for (Missile missile : jeu.recupererMissilesVaisseau()) {
+			missile.deplacerVerticalementVers(Direction.BAS);
+		}
+		for (Missile missile : jeu.recupererMissilesEnvahisseur()) {
+			missile.deplacerVerticalementVers(Direction.HAUT);
+		}
+	}
 	
 	public boolean estDansEspaceJeu(int x, int y) {
 		return (((x >= 0) && (x < this.jeu.getLongueur())) && ((y >= 0) && (y < this.jeu.getHauteur())));
