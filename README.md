@@ -3,8 +3,7 @@
 - [Semaine 2](#semaine2) 
 - [Semaine 3](#semaine3) 
 - [Semaine 4](#semaine4) 
-
-Fonctionalité 13 :x:
+- [Semaine 5](#semaine5) 
 
 - [Glossaire](#glossaire) 
 
@@ -72,19 +71,25 @@ Fonctionalité 13 :x:
 
 ------------- 
 
+## Semaine 5 <a id="semaine 5"></a>
+### Fonctinnalité 13 (en partie) : Toute amélioration possible pour réaliser le Space Invader de vos rêves
+
+![Diagrammes de classes fonctionnalite 13](images/diagramme_fc13.png)
+------------- 
+
 ## Glossaire <a id="glossaire"></a>
 
-:airplane: * **Vaisseau** : Véhicule héritant de spriteTireur. Il est controlé par le joueur et peut tirer des missiles.
+:airplane: **Vaisseau** : Véhicule héritant de spriteTireur. Il est controlé par le joueur et peut tirer des missiles.
 
-:rocket: * **Missile Vaisseau** : Objet partant du vaisseau, pouvant détruire un envahisseur ou un missile de l'envahisseur lors de la collision.
+:rocket: **Missile Vaisseau** : Objet partant du vaisseau, pouvant détruire un envahisseur ou un missile de l'envahisseur lors de la collision.
 
-:rocket: * **Missile Envahisseur** : Objet partant de l'envahisseur, pouvant détruire le vaisseau et faire perdre la partie. 
+:rocket: **Missile Envahisseur** : Objet partant de l'envahisseur, pouvant détruire le vaisseau et faire perdre la partie. 
 
-:space_invader: * **Envahisseur** : Ennemi tirant des missiles. Le but est de les détruires pour gagner le jeu. 
+:space_invader: **Envahisseur** : Ennemi tirant des missiles. Le but est de les détruires pour gagner le jeu. 
 
-:dash: * **Vitesse** : Unité pour accelerer le deplacement des objets de type sprite. 
+:dash: **Vitesse** : Unité pour accelerer le deplacement des objets de type sprite. 
 
-:boom: * **Collision** : Action lors de la rencontre de deux sprite.
+:boom: **Collision** : Action lors de la rencontre de deux sprite.
 
 * **Sprite** : Tout objet visible sur le terrain de jeu.
 
