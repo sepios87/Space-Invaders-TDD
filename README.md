@@ -1,4 +1,4 @@
-# Space invaders
+# Space invaders 👾
 - [Semaine 1](#semaine1) 
 - [Semaine 2](#semaine2) 
 - [Semaine 3](#semaine3) 
